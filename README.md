@@ -1,7 +1,7 @@
 # Inflation Adjusted Pricing Contract
 This project contains a smart contract for **adjusting the pricing of goods or services based on yearly inflation data**. The inflation data is fetched using [Chainlink](https://chain.link/) Oracles and provided by the [Truflation](https://truflation.com/) data feed. The contract uses [Chainlink Pricefeeds](https://docs.chain.link/data-feeds/price-feeds/addresses/?network=polygon#Mumbai%20Testnet) and is automated using [Chainlink Automation](https://docs.chain.link/docs/chainlink-automation/).
 
-[Live demo on Mumbai Testnet](https://mumbai.polygonscan.com/address/0xbf6B0Eb274aa57d4DFAC2ca262Fb6Bd04C7573F3#code).
+[Live demo on Mumbai Testnet](https://mumbai.polygonscan.com/address/0x08511Dd62d81B59184B2FE718b8a9384E96497bE#writeContract).
 
 ## Table of Contents
 - [Overview](#overview)
@@ -26,7 +26,7 @@ Deploy the TruflationTester contract first using the following command:
 yarn hardhat deploy --tags truflationtester
 ```
 
-Update the helper-hardhat-config.js file with the correct TESTER_ADDRESS and GOERLI_TESTER_ADDRESS values for your deployment.
+Update the helper-hardhat-config.js file with the correct TESTER_ADDRESS value for your deployment.
 
 To deploy the InflationAdjustedPricing contract to your desired network, run the following command:
 ```
@@ -37,7 +37,12 @@ Replace <network-name> with the name of the network you'd like to deploy to, suc
 Please note what [networks](https://github.com/truflation/quickstart/blob/main/network.md) Truflation's data is available on.
 
 ## Testing
-To run the unit tests for the InflationAdjustedPricing contract, execute the following command:
+To run the unit tests for the InflationAdjustedPricing contract, first make sure you have deployed the MockV3Aggregator contract with:
+```
+yarn hardhat deploy --tags mocks
+```
+
+Then execute the following command:
 ```
 yarn hardhat test
 ```
