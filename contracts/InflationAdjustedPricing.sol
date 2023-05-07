@@ -6,11 +6,11 @@ import "@chainlink/contracts/src/v0.8/AutomationCompatible.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 contract InflationAdjustedPricing is AutomationCompatibleInterface {
-    TruflationTester public truflationTester;
-    AggregatorV3Interface public priceFeed;
+    TruflationTester internal truflationTester;
+    AggregatorV3Interface internal priceFeed;
 
-    uint256 public updateInterval;
-    mapping(address => uint256) public basePrices;
+    uint256 internal updateInterval;
+    mapping(address => uint256) internal basePrices;
     mapping(address => uint256) public lastUpdateTimes;
 
     constructor(
