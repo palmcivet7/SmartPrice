@@ -1,0 +1,22 @@
+.introContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.introParagraph {
+    max-width: 800px; /* Set a maximum width for the paragraph */
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 1rem; /* Add some padding to the sides */
+}
+
+.introParagraph a {
+    font-weight: bold;
+}
+
+.introParagraph a:hover {
+    text-decoration: underline;
+}
