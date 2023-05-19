@@ -7,6 +7,7 @@ import IntroParagraph from "../components/IntroParagraph"
 import Footer from "../components/Footer"
 import { Button, useNotification } from "web3uikit"
 import styles from "../styles/Home.module.css"
+import ImageComponent from "@/components/ImageComponent"
 
 export default function Home() {
     const [basePrice, setBasePrice] = useState(0)
@@ -181,6 +182,7 @@ export default function Home() {
                 </div>
             </div>
             <IntroParagraph />
+            <ImageComponent />
             <Footer />
         </div>
     )
