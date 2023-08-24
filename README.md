@@ -1,14 +1,16 @@
-# Inflation Adjusted Pricing Contract
+# SmartPrice: An Inflation Adjusted Pricing Contract
 This project contains a smart contract for **adjusting the pricing of goods or services based on yearly inflation data**. The inflation data is fetched using [Chainlink](https://chain.link/) Oracles and provided by the [Truflation](https://truflation.com/) data feed. The contract uses [Chainlink Pricefeeds](https://docs.chain.link/data-feeds/price-feeds/addresses/?network=polygon#Mumbai%20Testnet) and is automated using [Chainlink Automation](https://docs.chain.link/docs/chainlink-automation/).
 
 [Live demo on Mumbai Testnet](https://mumbai.polygonscan.com/address/0x08511Dd62d81B59184B2FE718b8a9384E96497bE#writeContract).
 
 ## Table of Contents
-- [Overview](#overview)
-- [Installation](#installation)
-- [Deployment](#deployment)
-- [Testing](#testing)
-- [License](#license)
+- [SmartPrice: An Inflation Adjusted Pricing Contract](#smartprice-an-inflation-adjusted-pricing-contract)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Installation](#installation)
+  - [Deployment](#deployment)
+  - [Testing](#testing)
+  - [License](#license)
 
 ## Overview
 The InflationAdjustedPricing contract is designed to work with the TruflationTester contract, which retrieves yearly inflation data from the Truflation data feed via Chainlink oracles. The InflationAdjustedPricing contract allows users to set a base price for their product or service, and the contract will adjust the price according to the yearly inflation data. The base price is set, and the adjusted price is received using Chainlink Pricefeeds. It should be noted only whole dollar values can be used, ie. 1, 5, 7, 100 etc. Additionally, the contract utilizes Chainlink Automation to periodically update the adjusted price based on the specified update interval.
